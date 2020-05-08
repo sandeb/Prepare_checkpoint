@@ -1,0 +1,17 @@
+<form method="post">
+    <input type="hidden" value="{{ item.id }}" name="id">
+    <input type="text" value="{{ item.title }}" name="title">
+    <select id="pet-select" name="movie">
+        <option selected value="{{ item.movie_id }}">{{ item.movie_title }}</option>
+        {% for movie in movies %}
+            <option value="{{ movie.id }}">{{ movie.title }}</option>
+        {% endfor %}
+    </select>
+    <select id="pet-select" name="planet">
+        <option selected value="{{ item.planet_id }}">{{ item.planet_name }}</option>
+        {% for planet in planets %}
+            <option value="{{ planet.id }}">{{ planet.name }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Valider">
+</form>

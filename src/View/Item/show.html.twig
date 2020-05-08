@@ -1,0 +1,10 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Item {{ item.title }}</h1>
+    <p>MOVIE TITLE : {{item.movie_title}}</p>
+    <p>PLANET NAME : {{item.planet_name}}</p>
+    <a href="/item/edit/{{ item.id }}">Edit</a>
+    <a href="/item/delete/{{item.id}}">Supprimer</a>
+    <a href="/item/index">Back</a>
+{% endblock %}
